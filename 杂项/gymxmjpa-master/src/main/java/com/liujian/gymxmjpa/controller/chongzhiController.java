@@ -32,7 +32,8 @@ import java.util.*;
  */
 @Controller
 @RequestMapping("/cz")
-public class chongzhiController {
+public class
+chongzhiController {
 
     @Autowired
     private chongzhiDao chongzhiDao;
