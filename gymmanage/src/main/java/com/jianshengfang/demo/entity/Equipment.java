@@ -5,6 +5,7 @@ package com.jianshengfang.demo.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 /**
  * @Description: 管理员信息实体类
@@ -20,8 +21,10 @@ public class Equipment {
         private String name;
         private String description;
         private int count;
-        private boolean isborrowed;
-        // Other relevant attributes
+        private boolean isBorrowed;
+        private LocalDateTime startTime; // 预约开始时间属性
+        private LocalDateTime endTime;
+    // Other relevant attributes
         @ManyToOne
         @JoinColumn(name = "user_id")
         private User user;

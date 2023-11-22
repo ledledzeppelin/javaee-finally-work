@@ -16,6 +16,5 @@ public class Adminuser {
     @GeneratedValue(strategy =  GenerationType.AUTO)   //主键的生成策略为自动选择适合数据库的主键生成策略。
     private long adminId;
     private String adminName;
-    private String account;
     private String adminPassword;
 }
