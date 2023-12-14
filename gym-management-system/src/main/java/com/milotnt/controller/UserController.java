@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
-
+@CrossOrigin(origins = {"http://localhost:8080", "null"})
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -36,7 +36,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
     @ApiOperation("用户课程")
-    @GetMapping("/userClass")
+    @PostMapping("/userClass")
     public ResponseEntity<List<ClassOrder>> getUserClass(@RequestBody Member member) {
 
         Integer memberAccount = member.getMemberAccount();
@@ -52,7 +52,7 @@ public class UserController {
 
     @ApiOperation("查找课程")
     @GetMapping("/applyClass")
-    public ResponseEntity<List<ClassTable>> getUserApplyClass(@RequestBody Member member) {
+    public ResponseEntity<List<ClassTable>> getUserApplyClass() {
 
         List<ClassTable> classList = classTableService.findAll();
         return ResponseEntity.ok(classList);

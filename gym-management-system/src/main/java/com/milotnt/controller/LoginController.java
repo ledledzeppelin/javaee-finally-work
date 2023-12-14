@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
+@CrossOrigin(origins = {"http://localhost:8080", "null"})
 @RestController
 public class LoginController {
 

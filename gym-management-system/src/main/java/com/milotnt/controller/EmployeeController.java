@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-
+@CrossOrigin(origins = {"http://localhost:8080", "null"})
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
